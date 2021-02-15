@@ -2,12 +2,11 @@ import "./App.css";
 import NavbarItem from "./components/NavbarItem";
 import Face from "./components/Face";
 import Cages from "./components/Cages";
-import img1 from "./images/1.png";
-import img2 from "./images/2.png";
-import img3 from "./images/3.png";
-import img4 from "./images/4.png";
+import reactLogos from "./images/reactLogos";
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
-const imgs = [img1, img2, img3, img4];
 const animals = ["🦍", "🐘", "🦆", "🦒", "🐅", "🐦", "🦜", "🦈"];
 const navbarItems = ["Home", "About", "Contact", "Blog", "Shop", "Something"];
 
@@ -23,6 +22,29 @@ const App = () => {
         </div>
       </div>
       <header className="App-header">
+        <Accordion defaultActiveKey="0">
+          <Card>
+            <Card.Header>
+              <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                Click me!
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body>Hello! I'm the body</Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card>
+            <Card.Header>
+              <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                Click me!
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>Hello! I'm another body</Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
+
         <Face frown lala="Hasan" hoho={324} hehe={() => console.log("labas")} />
         <h1>
           <code>Welcome to the zoo!</code>
@@ -31,7 +53,7 @@ const App = () => {
         <Cages animals={["🐊", "🐙"]} />
 
         <div>
-          {imgs.map((image) => (
+          {reactLogos.map((image) => (
             <img src={image} alt="React logo" />
           ))}
         </div>

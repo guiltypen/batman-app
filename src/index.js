@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const GlobalStyle = createGlobalStyle`
 body {
