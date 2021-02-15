@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarItemButton = styled.button`
-  background-color: salmon;
+  background-color: ${(props) => props.theme.lightBackground};
   margin-left: 5px;
   border: none;
   padding: 10px;

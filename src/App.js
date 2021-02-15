@@ -24,7 +24,9 @@ const App = () => {
       </div>
       <header className="App-header">
         <Face frown lala="Hasan" hoho={324} hehe={() => console.log("labas")} />
-        <h1>Welcome to the zoo!</h1>
+        <h1>
+          <code>Welcome to the zoo!</code>
+        </h1>
         <Cages animals={animals} />
         <Cages animals={["🐊", "🐙"]} />
 

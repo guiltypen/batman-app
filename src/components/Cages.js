@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import jungle from "../images/Jungle.jpg";
 
 const CagesWrapper = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: ${(props) => props.theme.defaultMargins};
+  background-image: url(${jungle});
+  background-size: contain;
 `;
 
 const AnimalCage = styled.label`
