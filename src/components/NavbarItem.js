@@ -1,13 +1,11 @@
+import { NavbarItemButton } from "./styles";
+
 const NavbarItem = (props) => {
   const sayMyName = () => {
     alert(props.text);
   };
 
-  return (
-    <button className="App-button" onClick={sayMyName}>
-      {props.text}
-    </button>
-  );
+  return <NavbarItemButton onClick={sayMyName}>{props.text}</NavbarItemButton>;
 };
 
 export default NavbarItem;
