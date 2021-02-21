@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import jungle from "../images/Jungle.jpg";
 
@@ -16,8 +17,10 @@ const AnimalCage = styled.label`
 const Cages = (props) => {
   return (
     <CagesWrapper>
-      {props.animals.map((animal) => (
-        <AnimalCage>{animal}</AnimalCage>
+      {props.animals.map((employee) => (
+        <Link to={`/cage/${employee.name}`}>
+          <AnimalCage>{employee.emoji}</AnimalCage>
+        </Link>
       ))}
     </CagesWrapper>
   );
